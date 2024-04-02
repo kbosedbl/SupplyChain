@@ -1,0 +1,673 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "A",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "B",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "C",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "D",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "E",
+						"type": "uint256"
+					}
+				],
+				"name": "log",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "a",
+						"type": "int256"
+					}
+				],
+				"name": "ABS",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_medicineQuantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_userID",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "_timeOfSell",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "_mfdDate",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "_expDate",
+						"type": "tuple"
+					}
+				],
+				"name": "addMedicine",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "a",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "b",
+						"type": "string"
+					}
+				],
+				"name": "compareStrings",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_batchcode",
+						"type": "string"
+					}
+				],
+				"name": "deleteMedicine",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_userID",
+						"type": "string"
+					}
+				],
+				"name": "findStakeHolderByUserID",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "k",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "startMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "endMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "level",
+						"type": "string"
+					}
+				],
+				"name": "getMovingAvgForecast",
+				"outputs": [
+					{
+						"internalType": "int256[]",
+						"name": "",
+						"type": "int256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "startMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "endMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "level",
+						"type": "string"
+					}
+				],
+				"name": "getSeasonalForecast",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "letters",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "medicines",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "batchCode",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "idOfUser",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantitySoldInNumbers",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "timeOfSelling",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "addedByStakeHolderType",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "mfdDate",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "day",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "month",
+								"type": "int256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "year",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Time",
+						"name": "expDate",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "random",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "random2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "randomString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_aadharID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_stakeholderType",
+						"type": "string"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "test",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "batchCode",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "medicineName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "idOfUser",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantitySoldInNumbers",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "day",
+										"type": "uint256"
+									},
+									{
+										"internalType": "int256",
+										"name": "month",
+										"type": "int256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "year",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct SupplyChainDataManagement.Time",
+								"name": "timeOfSelling",
+								"type": "tuple"
+							},
+							{
+								"internalType": "string",
+								"name": "addedByStakeHolderType",
+								"type": "string"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "day",
+										"type": "uint256"
+									},
+									{
+										"internalType": "int256",
+										"name": "month",
+										"type": "int256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "year",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct SupplyChainDataManagement.Time",
+								"name": "mfdDate",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "day",
+										"type": "uint256"
+									},
+									{
+										"internalType": "int256",
+										"name": "month",
+										"type": "int256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "year",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct SupplyChainDataManagement.Time",
+								"name": "expDate",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct SupplyChainDataManagement.Medicine[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "k",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "startMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "endMonth",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "medicineName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "level",
+						"type": "string"
+					}
+				],
+				"name": "weightedMovingAverageMethod",
+				"outputs": [
+					{
+						"internalType": "int256[]",
+						"name": "",
+						"type": "int256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SupplyChainDataManagement.sol": "SupplyChainDataManagement"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SupplyChainDataManagement.sol": {
+			"keccak256": "0x714bf515d2d61698a2aa9072311228cccba47439ebd3b0e829d47ee0b5467351",
+			"urls": [
+				"bzz-raw://ef0338598fe4fac9e0409e8f74db587924dbcd38e184f70a76b4f936ac40e187",
+				"dweb:/ipfs/QmefWNRLF9SQ945qaCCSa1jjZa9edpMLaTj73uBmcT4Lvz"
+			]
+		}
+	},
+	"version": 1
+}
